@@ -10,5 +10,5 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: demo_deploy_1
-        run: echo "This is demo deploy"
+      - name: demo_deploy_2
+        run: echo "This is demo deploy 2"
