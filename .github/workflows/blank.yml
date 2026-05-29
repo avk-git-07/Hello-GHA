@@ -1,6 +1,6 @@
 name: Hello GHA
 on: workflow_dispatch
-job:
+jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
