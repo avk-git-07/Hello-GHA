@@ -10,11 +10,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: demo_test_2
+      - name: demo_test_1
         run: echo "This is demo test"
   
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: demo_deploy_2
-        run: echo "This is demo deploy 2"
+      - name: demo_deploy_1
+        run: echo "This is demo deploy"
