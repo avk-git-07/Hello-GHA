@@ -7,6 +7,12 @@ jobs:
       - name: demo_build_1
         run: echo "This is Demo build"
 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: demo_test_2
+        run: echo "This is demo test"
+  
   deploy:
     runs-on: ubuntu-latest
     steps:
