@@ -23,29 +23,56 @@
 
 # # -----------
 
-name: Branch based push
-on: 
-  push:
-    branches:
-      - main
+# name: Branch based push
+# on: 
+#   push:
+#     branches:
+#       - main
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: main_branch_push
+#         run: echo "Push if the branch is main"
+
+# # -----------
+
+# name: Branch based push
+# on: 
+#   push:
+#     branches: # this will consider all below mentioned branches.
+#       - main
+#       - develop
+#       - "release/**" # this will consider the branch which is having the prefix "release".
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: main_branch_push
+#         run: echo "Push if the branch is main"
+
+# # -----------
+
+name: PR Demo
+on:
+push:
+  branches:
+    - main
+    - develop
+    - "release/**"
+pull_request:
+  branches:
+    - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: main_branch_push
-        run: echo "Push if the branch is main"
-
-# # -----------
-
+      - name: pull request demo
+        run: echo "Pull request demo"
 
 
 # # -----------
-
-
-
-
-# # -----------
-
 
 
 
@@ -53,9 +80,7 @@ jobs:
 
 
 
-
 # # -----------
-
 
 
 
