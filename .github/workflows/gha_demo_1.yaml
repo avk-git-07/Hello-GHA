@@ -32,7 +32,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      run: echo "Push if the branch is main"
+      - name: main_branch_push
+        run: echo "Push if the branch is main"
 
 # # -----------
 
