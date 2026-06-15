@@ -61,6 +61,8 @@ on:
       - develop
       - "release/**"
   pull_request:
+    types:
+      - opened
     branches:
       - main
 
