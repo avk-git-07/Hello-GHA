@@ -92,7 +92,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: variable demo
-        run: echo "Hi, ${{my_name}}"
+        run: echo "Hi, ${{vars.my_name}}"
 
 # # -----------
 
