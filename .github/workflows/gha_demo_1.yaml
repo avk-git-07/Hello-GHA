@@ -88,11 +88,11 @@ on:
       - main
 
 jobs:
-  buuild:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: variable demo
-        run: echo "Hi, ${{vars.my_name}}"
+        run: echo "Hi, ${{vars.MY_NAME}}"
 
 # # -----------
 
