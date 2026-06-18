@@ -53,30 +53,46 @@
 
 # # -----------
 
-name: PR Demo
+# name: PR Demo
+# on:
+#   push:
+#     branches:
+#       - main
+#       - develop
+#       - "release/**"
+#   pull_request:
+#     types:
+#       - opened
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: pull request demo
+#         run: echo "Pull request demo"
+
+
+# # -----------
+name: Variable Demo
 on:
   push:
     branches:
       - main
       - develop
       - "release/**"
+
   pull_request:
-    types:
-      - opened
     branches:
       - main
 
 jobs:
-  build:
+  buuild:
     runs-on: ubuntu-latest
     steps:
-      - name: pull request demo
-        run: echo "Pull request demo"
-
-
-# # -----------
-
-
+      - name: variable demo
+        run: echo "Hi" ${{MY_NAME}}
 
 # # -----------
 
