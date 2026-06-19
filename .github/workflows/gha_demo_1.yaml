@@ -75,7 +75,27 @@
 
 
 # # -----------
-name: Variable Demo
+# name: Variable Demo
+# on:
+#   push:
+#     branches:
+#       - main
+#       - develop
+#       - "release/**"
+
+#   pull_request:
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: variable demo
+#         run: echo "Hi, ${{vars.MY_NAME}}"
+
+# # -----------
+name: Secrets Demo
 on:
   push:
     branches:
@@ -88,15 +108,11 @@ on:
       - main
 
 jobs:
-  build:
+  Secrets_Demo:
     runs-on: ubuntu-latest
     steps:
-      - name: variable demo
-        run: echo "Hi, ${{vars.MY_NAME}}"
-
-# # -----------
-
-
+      - name: Secrets_Demo
+        run: echo "Docker Password is ${{secrets.DKR_PWD_AVK}}"
 
 # # -----------
 
