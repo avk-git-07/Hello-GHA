@@ -8,3 +8,24 @@ jobs:
         run: |
           echo "This is line 1"
           echo "This is line 2"
+
+##---
+
+name: Actions Demo
+on: push
+jobs:
+  actions_demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+      - name: Print the index.html
+        run: cat index.html
+
+
+##---
+
+
+
+
+##---
