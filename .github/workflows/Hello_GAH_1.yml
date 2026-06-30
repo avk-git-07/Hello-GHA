@@ -1,10 +1,31 @@
-name: Hello GHA
-on: workflow_dispatch
+# name: Hello GHA
+# on: workflow_dispatch
+# jobs:
+#   hello:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Hello GHA 1
+#         run: |
+#           echo "This is line 1"
+#           echo "This is line 2"
+
+##---
+
+name: Actions Demo
+on: push
 jobs:
-  hello:
+  actions_demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello GHA 1
-        run: |
-          echo "This is line 1"
-          echo "This is line 2"
+      - name: Checkout the code
+        uses: actions/checkout@v4
+      - name: Print the index.html
+        run: cat .github/workflows/index.html
+
+
+##---
+
+
+
+
+##---
