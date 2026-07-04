@@ -16,7 +16,7 @@ jobs:
 
       - name: Placing static website code to S3
         run: |
-          aws s3 sync ./ s3://avk-gha-static-website-demo \
+          aws s3 sync ./ s3://avk-gha-static-website-demo/ \
           --exclude "*" \
           --include "index.html"
 
