@@ -14,7 +14,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AVK_SECRETE_KEY_ID }}
           aws-region: us-east-1
 
-      - name: Placing static website code to S3
+      - name: Copying static website code to S3
         run: |
           aws s3 sync ./ s3://avk-gha-static-website-demo/ \
           --exclude "*" \
