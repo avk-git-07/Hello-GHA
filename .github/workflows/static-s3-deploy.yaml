@@ -1,0 +1,22 @@
+name: Static Website S3 Demo
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code from repo
+        uses: actions/Checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AVK_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AVK_SECRETE_KEY_ID }}
+          aws-region: us-east-1
+
+      - name: Placing static website code to S3
+        run: |
+          aws s3 sync ./ s3://avk-gha-static-website-demo \
+          --exclude "*" \
+          --include "index.html"
+
