@@ -17,5 +17,5 @@ jobs:
       - name: Placing the static website from runner to S3
         run: |
           aws s3 sync ./ s3://avk-static-website-s3-demo/ \
-          --exclude: "*" \
-          --include: "index.html"
+          --exclude "*" \
+          --include "index.html"
