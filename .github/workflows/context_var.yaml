@@ -25,7 +25,7 @@ jobs:
 
       - name: Printing commit id with context variable declaration
         run: |
-          echo "It will print only the 7-character commit ID."
+          echo "It will also print the entire 40-character SHA.(The commit ID)."
           echo "${{ github.sha }}"
 
       
