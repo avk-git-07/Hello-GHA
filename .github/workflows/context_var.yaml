@@ -18,5 +18,10 @@ jobs:
           echo "The github variables are in the below...!!!"
           echo "${{ toJson(github) }}"
 
+      - name: Print environment varibles
+        run: |
+        echo "The Environment variables list is"
+        echo "$GITHUB_SHA"
+
       
           
