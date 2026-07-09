@@ -9,9 +9,9 @@ jobs:
     steps:
       - name: Using the context variables
         run: |
-          echo "This workflow is triggered by ${{ github.actor }}"
-          echo "The repository is ${{ github.repository }}"
-          echo "The branch is ${{ github.ref_name }}"
+          echo "This workflow is triggered by '${{ github.actor }}'"
+          echo "The repository is '${{ github.repository }}'"
+          echo "The branch is '${{ github.ref_name }}'"
 
       - name: Print all variables under github.
         run: |
