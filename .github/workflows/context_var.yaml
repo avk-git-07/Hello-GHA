@@ -13,5 +13,8 @@ jobs:
           echo "The repository is $ {{ github.repository }}"
           echo "The branch is $ {{ github.ref_name }}"
 
+      - name: Print all variables under github.
+        run: echo "${{ toJson(github) }}"
+
       
           
