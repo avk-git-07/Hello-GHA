@@ -18,10 +18,15 @@ jobs:
           echo "The github variables are in the below...!!!"
           echo "${{ toJson(github) }}"
 
-      - name: Print environment varibles
+      - name: Printing commit id with environment variable declaration
         run: |
-          echo "The Environment variables list is"
+          echo "It will print the entire 40-character SHA.(The commit ID)."
           echo "$GITHUB_SHA"
+
+      - name: Printing commit id with context variable declaration
+        run: |
+          echo "It will print only the 7-character commit ID."
+          echo "${{ github.sha }}"
 
       
           
