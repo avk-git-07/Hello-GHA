@@ -20,8 +20,8 @@ jobs:
 
       - name: Print environment varibles
         run: |
-        echo "The Environment variables list is"
-        echo "$GITHUB_SHA"
+          echo "The Environment variables list is"
+          echo "$GITHUB_SHA"
 
       
           
