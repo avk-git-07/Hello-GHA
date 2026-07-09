@@ -1,5 +1,8 @@
 name: Static Website S3 Demo
-on: push
+on: 
+  push:
+    paths:
+      - ".github/workflows/static-s3-deploy.yaml"
 jobs:
   delploy:
     runs-on: ubuntu-latest
