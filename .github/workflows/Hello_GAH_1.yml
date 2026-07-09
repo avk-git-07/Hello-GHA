@@ -12,7 +12,10 @@
 ##---
 
 name: Actions Demo
-on: push
+on: 
+  push:
+    paths:
+      - ".github/workflows/Hello_GHA_1.yml"
 jobs:
   actions_demo:
     runs-on: ubuntu-latest
