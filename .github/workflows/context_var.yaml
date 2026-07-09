@@ -1,5 +1,8 @@
 name: Demo of Context Variables
-on: push
+on: 
+  push:
+    paths:
+      - ".github/workflows/context_var.yaml"
 jobs:
   context-demo:
     runs-on: ubuntu-latest
@@ -9,4 +12,6 @@ jobs:
           echo "This workflow is triggered by ${{ github.actor }}"
           echo "The repository is $ {{ github.repository }}"
           echo "The branch is $ {{ github.ref_name }}"
+
+      
           
