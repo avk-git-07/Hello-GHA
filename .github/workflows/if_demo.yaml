@@ -10,7 +10,9 @@ jobs:
   if_demo:
     runs-on: ubuntu-latest
     steps:
-      - name: If Demo
+      - name: If the branch is main
         if: ${{ github.ref == 'refs/heads/main' }}
-        run: echo "Run this 'If Demo' step"
+        run: echo "Runnig this step for the 'main' branch"
+      - name: No condition step
+        run: echo "Running this step where there is no condition"
         
