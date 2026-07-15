@@ -1,0 +1,14 @@
+name: Demo of If Condition
+on: 
+  push:
+    branches:
+      - main  
+      - development
+jobs:
+  if_demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: If Demo
+        if: ${{ github.ref == 'refs/heads/qa' }}
+        run: echo "Run this 'If Demo' step"
+        
