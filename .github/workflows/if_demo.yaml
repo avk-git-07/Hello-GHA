@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: If Demo
-        if: ${{ github.ref == 'refs/heads/qa' }}
+        if: ${{ github.ref == 'refs/heads/main' }}
         run: echo "Run this 'If Demo' step"
         
