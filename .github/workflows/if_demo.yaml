@@ -1,6 +1,8 @@
 name: Demo of If Condition
 on: 
   push:
+    paths:
+      - ".github/workflows/if_demo.yaml"
     branches:
       - main  
       - development
