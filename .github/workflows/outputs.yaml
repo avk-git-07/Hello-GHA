@@ -1,5 +1,8 @@
 name: Demo of outputs
-on: push
+on: 
+  push:
+    paths:
+      - ".github/workflows/outputs.yaml"
 jobs:
   build:
     outputs:
