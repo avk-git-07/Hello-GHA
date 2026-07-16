@@ -6,6 +6,8 @@ on:
     paths:
       - ".github/workflows/build_deploy.yaml"
   pull_request: 
+    paths:
+      - ".github/workflows/build_deploy.yaml"
     types:
       - opened
       - synchronize
