@@ -1,0 +1,43 @@
+name: If with Functions
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - feature/**
+    paths:
+      - ".github/workflows/if_with_functions.yaml"
+
+jobs:
+  quality_checks:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref_name, 'feature') && github.event_name == 'push'
+    steps:
+      - name: quality check
+        run: echo "checking the quality of the code 2nd time"
+  dev_deploy:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref_name, 'develop') && github.event_name == 'push'
+    steps:
+      - name: development deploy
+        run: echo "deployment in the development environment"
+  prod_deploy:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref_name, 'main') && github.event_name == 'push'
+    steps:
+      - name: production deployment
+        run: echo "deployment in the production environment"
+  success_notify:
+    needs: ['quality_checks', 'dev_deploy', 'prod_deploy']
+    if: always() && !failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: success notification
+        run: echo "Success email sent to team"
+  failure_notify:
+    needs: ['quality_checks', 'dev_deploy', 'prod_deploy']
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: failure notification
+        run: echo "failure email sent to team"
